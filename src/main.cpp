@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #define btnIN A0 //Entrada analogica
 #define LED 10   //Salida digital
-//Hola jjj
+
 enum funMode
 {
   OFF,
@@ -147,5 +147,5 @@ void funcDesva(int temp){//la funcion recibe un entero el cual varia la velocida
 
   }
 
-  //Cambio git
+  //Prueba de cambio para repositorio remoto
 }
