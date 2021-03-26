@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #define btnIN A0 //Entrada analogica
 #define LED 10   //Salida digital
-
+//Hola jjj
 enum funMode
 {
   OFF,
