@@ -3,7 +3,7 @@
 #include <Keypad.h>
 #define btnIN A0 //Entrada analogica
 #define LED 10   //Salida digital
-
+/*
 char pulsacion;       // almacena la tecla pulsada
 int  contador = 1;    // cuenta el nivel del menu en el que se esta
 const byte ROWS = 4;  //Cuatro Filas
@@ -19,6 +19,7 @@ byte colPins[COLS] = {5,4,3,2}; //Puntos de conexion del teclado al arduino COLU
 Keypad Teclado1 = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS ); //Configura el teclado
 LiquidCrystal_I2C lcd(0x27,16,2); // dependiendo del fabricante del I2C el codigo 0x27 cambiar a
                                   // 0x3F , 0x20 , 0x38 , 
+*/
 enum funMode
 {
   OFF,
@@ -46,6 +47,7 @@ void funcB3(int);
 void funcB4(int);
 void funcDesva(int);
 
+/*
 void intro_0();
 void menu_1();
 void menu_2();
@@ -56,26 +58,27 @@ void accion_2();
 void accion_3();
 void accion_4();
 void intermitente();
-
+*/
 void setup()
 {
   pinMode(btnIN, INPUT_PULLUP);
   pinMode(LED, OUTPUT);
-
+  /*
   lcd.init();
   lcd.backlight();
   pinMode(12, OUTPUT);
   intro_0();             // muestra el intro de  bienvenida
+  */
 }
 
 void loop()
 {
   
-  func1(); //Button detection
-  func2(); //Menu de seleccion
+  //func1(); //Button detection
+  //func2(); //Menu de seleccion
   funcDesva(10);
   
-
+/*
   pulsacion = Teclado1.getKey() ;  // Lee la tecla pulsada
   if (pulsacion != 0) {      
       lcd.clear();
@@ -85,7 +88,7 @@ void loop()
   if(contador == 3){ menu_3();accion_3();}
   if(contador == 2){ menu_2();accion_2();}
   if(contador == 1){ menu_1();accion_1();}
-  
+  */
 }
 /////////////////////////////////////////////
 void func1()
@@ -195,6 +198,7 @@ void funcDesva(int temp){//la funcion recibe un entero el cual varia la velocida
 
   //Prueba de cambio para repositorio remoto
 }
+/*
 /////////////////////Intro_0 //////////////////////////////
 void intro_0(){ 
  lcd.clear();  // Borra el  LCD
@@ -278,3 +282,4 @@ void intermitente(){
   digitalWrite(12,LOW);
   delay(300);
 }
+*/
